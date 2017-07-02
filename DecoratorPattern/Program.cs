@@ -1,5 +1,5 @@
-﻿using DecoratorPattern.MainCourse;
-using DecoratorPattern.Side;
+﻿using DecoratorPattern.Ingredients;
+using DecoratorPattern.Types;
 using System;
 
 namespace DecoratorPattern
@@ -8,26 +8,27 @@ namespace DecoratorPattern
     {
         static void Main(string[] args)
         {
-            Breakfast meal1 = new Toast();
-            Log(meal1);
+            Pizza pizza1 = new MushroomPizza();
+            pizza1 = new Tomato(pizza1);
+            Log(pizza1);
 
-            Breakfast meal2 = new Toast();
-            meal2 = new Ham(meal2);
-            meal2 = new Ham(meal2);
-            Log(meal2);
+            Pizza pizza2 = new HawaiiPizza();
+            pizza2 = new Cheese(pizza2);
+            pizza2 = new Tomato(pizza2);
+            Log(pizza2);
 
-            Breakfast meal3 = new Burger();
-            meal3 = new Cheese(meal3);
-            meal3 = new Ham(meal3);
-            meal3 = new Cheese(meal3);
-            Log(meal3);
+            Pizza pizza3 = new MushroomPizza();
+            pizza3 = new Cheese(pizza3);
+            pizza3 = new Cheese(pizza3);
+            pizza3 = new Beef(pizza3);
+            Log(pizza3);
 
             Console.ReadKey();
         }
 
-        private static void Log(Breakfast meal)
+        private static void Log(Pizza pizza)
         {
-            Console.WriteLine($"餐點: {meal.GetDescription()} 價格: {meal.cost()}");
+            Console.WriteLine($"披薩: {pizza.GetName()}, 價格: {pizza.Cost()}");
         }
     }
 }

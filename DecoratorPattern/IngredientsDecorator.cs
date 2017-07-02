@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace DecoratorPattern
 {
-    public abstract class CodimentDecorator: Breakfast
+    public abstract class IngredientsDecorator : Pizza
     {
-        public abstract override string GetDescription();
+        public abstract override string GetName();
     }
 }

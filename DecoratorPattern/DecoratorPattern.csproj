@@ -43,14 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Breakfast.cs" />
-    <Compile Include="CodimentDecorator.cs" />
-    <Compile Include="MainCourse\Burger.cs" />
-    <Compile Include="MainCourse\Toast.cs" />
+    <Compile Include="IngredientsDecorator.cs" />
+    <Compile Include="Ingredients\Beef.cs" />
+    <Compile Include="Ingredients\Cheese.cs" />
+    <Compile Include="Ingredients\Tomato.cs" />
+    <Compile Include="Pizza.cs" />
+    <Compile Include="Types\HawaiiPizza.cs" />
+    <Compile Include="Types\MushroomPizza.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Side\Cheese.cs" />
-    <Compile Include="Side\Ham.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
