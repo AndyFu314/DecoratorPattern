@@ -23,12 +23,20 @@ namespace DecoratorPattern
             pizza3 = new Beef(pizza3);
             Log(pizza3);
 
+            Pizza pizza4 = new HawaiiPizza();
+            pizza4 = new Cheese(pizza4);
+            pizza4 = new Beef(pizza4);
+            pizza4 = new Tomato(pizza4);
+            pizza4 = new Shrimp(pizza4);
+            Log(pizza4);
+
             Console.ReadKey();
         }
 
         private static void Log(Pizza pizza)
         {
             Console.WriteLine($"披薩: {pizza.GetName()}, 價格: {pizza.Cost()}");
+            Console.WriteLine();
         }
     }
 }

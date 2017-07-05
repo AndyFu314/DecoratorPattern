@@ -46,6 +46,7 @@
     <Compile Include="IngredientsDecorator.cs" />
     <Compile Include="Ingredients\Beef.cs" />
     <Compile Include="Ingredients\Cheese.cs" />
+    <Compile Include="Ingredients\Shrimp.cs" />
     <Compile Include="Ingredients\Tomato.cs" />
     <Compile Include="Pizza.cs" />
     <Compile Include="Types\HawaiiPizza.cs" />
